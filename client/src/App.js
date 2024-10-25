@@ -1,11 +1,10 @@
 import './App.css';
-
+import Todo from './pages/Todo';
 function App() {
   return (
-    <div className="App">
-      
+    <div className="">
+      <Todo />
     </div>
   );
 }
-
 export default App;

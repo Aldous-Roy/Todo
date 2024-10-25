@@ -2,9 +2,10 @@ const express = require('express');
 const app = express();
 const port = 8000;
 const mongoose = require('mongoose');
-
+const cors=require('cors');
 // Middleware
 app.use(express.json());
+app.use(cors());
 
 app.get('/', (req, res) => {
     res.send('Hello World!');
@@ -87,12 +88,12 @@ app.delete('/todos/:id', async (req, res) => {
         }
 
         res.json({ message: 'Todo deleted successfully', todo: deletedTodo });
-        res.status(204).end();
+        // Remove res.status(204).end(); as you're already sending a response
     } catch (error) {
         console.log('Error deleting todo:', error);
         res.status(500).json({ message: error.message });
     }
-}); 
+});
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
