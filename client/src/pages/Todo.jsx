@@ -9,7 +9,7 @@ const Todo = () => {
     const apiUrl = "http://localhost:8000";
 
     const handleSubmit = () => {
-        if (title.trim() !== "" && description.trim() !== "") {
+        if (title.trim() !== "" && description.trim() !== ""){
             fetch(`${apiUrl}/todos`, {
                 method: "POST",
                 headers: {
