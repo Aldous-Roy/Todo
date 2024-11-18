@@ -99,7 +99,7 @@ const Todo = () => {
     return (
         <div className='bg-gray-50 p-6'>
             <div>
-                <h1 className='font-semibold text-center text-3xl p-4 mb-6 bg-green-500 text-white rounded-md shadow-md'>
+                <h1 className='font-semibold text-center text-5xl p-4 mb-6 bg-green-500 text-white rounded-md shadow-md'>
                     To Do List
                 </h1>
             </div>
